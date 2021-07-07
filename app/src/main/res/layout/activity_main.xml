@@ -66,6 +66,7 @@
                 android:onClick="clickButton"
                 android:layout_marginRight="3pt"
                 android:text="" />
+
         </TableRow>
 
         <TableRow

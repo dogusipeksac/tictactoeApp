@@ -1,4 +1,4 @@
-package com.example.tictactoeapp;
+ package com.example.tictactoeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 sellId=4;
                 break;
             case R.id.button5:
-                sellId=4;
+                sellId=5;
                 break;
             case R.id.button6:
                 sellId=6;
@@ -79,9 +79,12 @@ public class MainActivity extends AppCompatActivity {
        // Toast.makeText(this,"Turn player 1",Toast.LENGTH_SHORT).show();
     }
     buttonSelected.setEnabled(false);
+
     CheckWinner();
     }
-    void CheckWinner(){
+
+
+    int CheckWinner(){
         int winner=-1;
         //row 1
         if(player1.contains(1)&&player1.contains(2)&&player1.contains(3)){
@@ -128,11 +131,13 @@ public class MainActivity extends AppCompatActivity {
         if(winner!=-1){
             if(winner==1){
                 Toast.makeText(this,"Player 1 is winner",Toast.LENGTH_LONG).show();
+
             }
             if(winner==2){
                 Toast.makeText(this,"Player 2 is winner",Toast.LENGTH_LONG).show();
             }
         }
+        return winner;
 
     }
     void AutoPlay(){
@@ -182,9 +187,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         PlayGame(cellID,buttonSelected);
-
-
-
-
     }
+   
 }
